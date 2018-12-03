@@ -4,10 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Hashtable;
-import java.util.Map;
+import java.util.*;
 
 
 public class DayTwo {
@@ -54,43 +51,35 @@ public class DayTwo {
         }
         return map;
     }*/
-    //PART 2
+    //PART TWO
     public static void doIt(BufferedReader r, PrintWriter w) throws IOException {
         // Your code goes here - see Part0 for an example
-        int doubles = 0;
-        int triples = 0;
+        List<String> list = new ArrayList<>();
         for (String line = r.readLine(); line != null; line = r.readLine()) {
-            HashMap<Character, Integer> map = parse(line);
-            Boolean hasDouble = false;
-            Boolean hasTriple = false;
-            for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-                if (entry.getValue() == 2 && !hasDouble) {
-                    doubles++;
-                    hasDouble = true;
+            list.add(line);
+        }
+        String s, next;
+        int num;
+        for (int i = 0; i < list.size()-1; i++) { //iterate over list
+            s = list.get(i);
+            for (int j = i+1; j < list.size(); j++) { // iterate over list to compare item i
+                next = list.get(j);
+                num = 0;
+                for (int e = 0; e < s.length(); e++) {
+                    if (s.charAt(e) == next.charAt(e)) {
+                        num++;
+                    }
                 }
-                else if (entry.getValue() == 3 && !hasTriple) {
-                    triples++;
-                    hasTriple = true;
+                if (num == 25) {
+                    System.out.println(s);
+                    System.out.println(next);
                 }
             }
+
         }
-        System.out.println(doubles*triples);
 
     }
-    //part one
-    public static HashMap<Character,Integer> parse(String s){
-        HashMap<Character, Integer> map = new HashMap<>();
-        map.put(s.charAt(0), 1);
-        for (int i = 1; i < s.length(); i++) {
-            if (map.containsKey(s.charAt(i))) {
-                map.put(s.charAt(i),map.get(s.charAt(i))+1);
-            }
-            else {
-                map.put(s.charAt(i),1);
-            }
-        }
-        return map;
-    }
+
     /**
      * The driver.  Open a BufferedReader and a PrintWriter, either from System.in
      * and System.out or from filenames specified on the command line, then call doIt.
