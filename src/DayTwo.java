@@ -4,7 +4,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Hashtable;
+import java.util.Map;
 
 
 public class DayTwo {
@@ -14,36 +17,79 @@ public class DayTwo {
      * @param w the writer to write to
      * @throws IOException
      */
-
+    /* PART ONE
     public static void doIt(BufferedReader r, PrintWriter w) throws IOException {
         // Your code goes here - see Part0 for an example
-        HashSet<Integer> set = new HashSet<>();
-        Integer total = 0;
+        int doubles = 0;
+        int triples = 0;
         for (String line = r.readLine(); line != null; line = r.readLine()) {
-            Integer e = parse(line);
-            total += e;
-            if (set.contains(total)) {
-                System.out.println(total);
-            } else {
-                set.add(total);
+            HashMap<Character, Integer> map = parse(line);
+            Boolean hasDouble = false;
+            Boolean hasTriple = false;
+            for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+                if (entry.getValue() == 2 && !hasDouble) {
+                    doubles++;
+                    hasDouble = true;
+                }
+                else if (entry.getValue() == 3 && !hasTriple) {
+                    triples++;
+                    hasTriple = true;
+                }
             }
         }
+        System.out.println(doubles*triples);
 
     }
-    public static Integer parse(String s){
-        Integer total = 0;
-        Integer returnVal = 0;
-        if(s.charAt(0) == '+'){
-            returnVal += Integer.parseInt(s);
-        }else if(s.charAt(0) =='-'){
-            total -= Integer.parseInt(s);
-            for (int i = 0; i < total; i++)
-            {
-                returnVal--;
+
+    public static HashMap<Character,Integer> parse(String s){
+        HashMap<Character, Integer> map = new HashMap<>();
+        map.put(s.charAt(0), 1);
+        for (int i = 1; i < s.length(); i++) {
+            if (map.containsKey(s.charAt(i))) {
+                map.put(s.charAt(i),map.get(s.charAt(i))+1);
+            }
+            else {
+                map.put(s.charAt(i),1);
             }
         }
+        return map;
+    }*/
+    //PART 2
+    public static void doIt(BufferedReader r, PrintWriter w) throws IOException {
+        // Your code goes here - see Part0 for an example
+        int doubles = 0;
+        int triples = 0;
+        for (String line = r.readLine(); line != null; line = r.readLine()) {
+            HashMap<Character, Integer> map = parse(line);
+            Boolean hasDouble = false;
+            Boolean hasTriple = false;
+            for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+                if (entry.getValue() == 2 && !hasDouble) {
+                    doubles++;
+                    hasDouble = true;
+                }
+                else if (entry.getValue() == 3 && !hasTriple) {
+                    triples++;
+                    hasTriple = true;
+                }
+            }
+        }
+        System.out.println(doubles*triples);
 
-        return returnVal;
+    }
+    //part one
+    public static HashMap<Character,Integer> parse(String s){
+        HashMap<Character, Integer> map = new HashMap<>();
+        map.put(s.charAt(0), 1);
+        for (int i = 1; i < s.length(); i++) {
+            if (map.containsKey(s.charAt(i))) {
+                map.put(s.charAt(i),map.get(s.charAt(i))+1);
+            }
+            else {
+                map.put(s.charAt(i),1);
+            }
+        }
+        return map;
     }
     /**
      * The driver.  Open a BufferedReader and a PrintWriter, either from System.in
