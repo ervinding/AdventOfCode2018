@@ -16,7 +16,6 @@ public class DayOne {
      */
 
     public static void doIt(BufferedReader r, PrintWriter w) throws IOException {
-        // Your code goes here - see Part0 for an example
         HashSet<Integer> set = new HashSet<>();
         Integer total = 0;
         for (String line = r.readLine(); line != null; line = r.readLine()) {

@@ -16,7 +16,6 @@ public class DayTwo {
      */
     /* PART ONE
     public static void doIt(BufferedReader r, PrintWriter w) throws IOException {
-        // Your code goes here - see Part0 for an example
         int doubles = 0;
         int triples = 0;
         for (String line = r.readLine(); line != null; line = r.readLine()) {
