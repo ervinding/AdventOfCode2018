@@ -12,19 +12,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/DayThree.java">
+        <entry file="file://$PROJECT_DIR$/src/DayFour.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="25" column="66" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="66" />
+            <state relative-caret-position="245">
+              <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/input3.txt">
+        <entry file="file://$PROJECT_DIR$/src/input4.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="980" column="21" selection-start-line="980" selection-start-column="16" selection-end-line="980" selection-end-column="21" />
+            <state relative-caret-position="16755">
+              <caret line="1117" column="42" selection-start-line="1117" selection-start-column="42" selection-end-line="1117" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -42,8 +42,8 @@
     <findStrings>
       <find>width</find>
       <find>part0</find>
-      <find>3,2</find>
       <find>405</find>
+      <find>3,2</find>
     </findStrings>
     <replaceStrings>
       <replace>lengthStr</replace>
@@ -63,7 +63,9 @@
         <option value="$PROJECT_DIR$/src/DayTwo.java" />
         <option value="$PROJECT_DIR$/src/DayOne.java" />
         <option value="$PROJECT_DIR$/src/input3.txt" />
+        <option value="$PROJECT_DIR$/src/input4.txt" />
         <option value="$PROJECT_DIR$/src/DayThree.java" />
+        <option value="$PROJECT_DIR$/src/DayFour.java" />
       </list>
     </option>
   </component>
@@ -101,8 +103,13 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543899538165" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544118226979" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -116,7 +123,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DayThree">
+  <component name="RunManager" selected="Application.DayFour">
+    <configuration name="DayFour" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="DayFour" />
+      <module name="AdventOfCode2018" />
+      <option name="PROGRAM_PARAMETERS" value="src/input4.txt" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DayOne" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="DayOne" />
       <module name="AdventOfCode2018" />
@@ -146,6 +161,7 @@
     <list>
       <item itemvalue="Application.DayTwo" />
       <item itemvalue="Application.DayThree" />
+      <item itemvalue="Application.DayFour" />
       <item itemvalue="Application.DayOne" />
     </list>
     <recent_temporary>
@@ -180,7 +196,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -188,7 +204,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -255,13 +271,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/input3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="980" column="21" selection-start-line="980" selection-start-column="16" selection-end-line="980" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/output3.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
@@ -269,10 +278,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/input3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="980" column="21" selection-start-line="980" selection-start-column="16" selection-end-line="980" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DayThree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="25" column="66" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="66" />
+        <state relative-caret-position="585">
+          <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16755">
+          <caret line="1117" column="42" selection-start-line="1117" selection-start-column="42" selection-end-line="1117" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DayFour.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
         </state>
       </provider>
     </entry>
