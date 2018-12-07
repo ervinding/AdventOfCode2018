@@ -14,38 +14,32 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/DayFour.java">
+        <entry file="file://$PROJECT_DIR$/src/DayFive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="63" column="13" lean-forward="true" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+            <state relative-caret-position="238">
+              <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Guard.java">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/Character.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+            <state relative-caret-position="177">
+              <caret line="6367" column="23" selection-start-line="6367" selection-start-column="23" selection-end-line="6367" selection-end-column="23" />
               <folding>
-                <element signature="e#159#160#0" expanded="true" />
-                <element signature="e#187#188#0" expanded="true" />
-                <element signature="e#253#254#0" expanded="true" />
-                <element signature="e#286#287#0" expanded="true" />
-                <element signature="e#697#698#0" expanded="true" />
-                <element signature="e#723#724#0" expanded="true" />
-                <element signature="e#772#773#0" expanded="true" />
-                <element signature="e#812#813#0" expanded="true" />
+                <element signature="e#227755#227756#0" expanded="true" />
+                <element signature="e#227804#227805#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/input4.txt">
+        <entry file="file://$PROJECT_DIR$/src/input5.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6965">
-              <caret line="520" column="24" selection-start-line="520" selection-start-column="19" selection-end-line="520" selection-end-column="24" />
+            <state>
+              <caret column="383" selection-start-column="383" selection-end-column="383" />
             </state>
           </provider>
         </entry>
@@ -53,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/String.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="3097" column="25" selection-start-line="3097" selection-start-column="25" selection-end-line="3097" selection-end-column="25" />
+            <state relative-caret-position="692">
+              <caret line="2328" column="20" selection-start-line="2328" selection-start-column="20" selection-end-line="2328" selection-end-column="20" />
               <folding>
                 <element signature="e#121727#121728#0" expanded="true" />
                 <element signature="e#121769#121770#0" expanded="true" />
@@ -102,6 +96,8 @@
         <option value="$PROJECT_DIR$/src/DayThree.java" />
         <option value="$PROJECT_DIR$/src/Guard.java" />
         <option value="$PROJECT_DIR$/src/DayFour.java" />
+        <option value="$PROJECT_DIR$/src/input5.txt" />
+        <option value="$PROJECT_DIR$/src/DayFive.java" />
       </list>
     </option>
   </component>
@@ -139,7 +135,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544141905293" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544145597069" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -159,7 +155,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DayFour">
+  <component name="RunManager" selected="Application.DayFive">
+    <configuration name="DayFive" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="DayFive" />
+      <module name="AdventOfCode2018" />
+      <option name="PROGRAM_PARAMETERS" value="src/input5.txt" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DayFour" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="DayFour" />
       <module name="AdventOfCode2018" />
@@ -198,6 +202,7 @@
       <item itemvalue="Application.DayTwo" />
       <item itemvalue="Application.DayThree" />
       <item itemvalue="Application.DayFour" />
+      <item itemvalue="Application.DayFive" />
       <item itemvalue="Application.DayOne" />
     </list>
     <recent_temporary>
@@ -232,7 +237,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4060241" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -240,7 +245,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -256,7 +261,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/DayFour.java</url>
-          <line>41</line>
+          <line>40</line>
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
@@ -354,28 +359,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/input4.txt">
+    <entry file="file://$PROJECT_DIR$/src/DayFour.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6965">
-          <caret line="520" column="24" selection-start-line="520" selection-start-column="19" selection-end-line="520" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="3097" column="25" selection-start-line="3097" selection-start-column="25" selection-end-line="3097" selection-end-column="25" />
-          <folding>
-            <element signature="e#121727#121728#0" expanded="true" />
-            <element signature="e#121769#121770#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1005">
+          <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Guard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        <state relative-caret-position="315">
+          <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
           <folding>
             <element signature="e#159#160#0" expanded="true" />
             <element signature="e#187#188#0" expanded="true" />
@@ -389,10 +383,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DayFour.java">
+    <entry file="file://$PROJECT_DIR$/src/input4.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="63" column="13" lean-forward="true" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+        <state relative-caret-position="6965">
+          <caret line="520" column="24" selection-start-line="520" selection-start-column="19" selection-end-line="520" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/Character.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="6367" column="23" selection-start-line="6367" selection-start-column="23" selection-end-line="6367" selection-end-column="23" />
+          <folding>
+            <element signature="e#227755#227756#0" expanded="true" />
+            <element signature="e#227804#227805#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="692">
+          <caret line="2328" column="20" selection-start-line="2328" selection-start-column="20" selection-end-line="2328" selection-end-column="20" />
+          <folding>
+            <element signature="e#121727#121728#0" expanded="true" />
+            <element signature="e#121769#121770#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="383" selection-start-column="383" selection-end-column="383" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DayFive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
         </state>
       </provider>
     </entry>

@@ -14,7 +14,6 @@ public class DayFour {
      * @param w the writer to write to
      * @throws IOException
      */
-    /* PART ONE */
     public static void doIt(BufferedReader r, PrintWriter w) throws IOException {
         List<String> l = new ArrayList<>();
         List<Guard> g = new ArrayList<>();
@@ -72,6 +71,7 @@ public class DayFour {
             System.out.println(gg.getId() + ":" + " max " + gg.getMax() + " minute " + gg.getMostAsleep());
         }
     }
+
     protected static int parseTime(String x) {
         String timeStr = x.substring(x.indexOf(':')+1, x.indexOf("]"));
         int num = Integer.parseInt(timeStr);
