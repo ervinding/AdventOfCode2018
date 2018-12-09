@@ -30,8 +30,8 @@ public class DayOne {
 
     }
     public static Integer parse(String s){
-        Integer total = 0;
-        Integer returnVal = 0;
+        int total = 0;
+        int returnVal = 0;
         if(s.charAt(0) == '+'){
             returnVal += Integer.parseInt(s);
         }else if(s.charAt(0) =='-'){

@@ -52,7 +52,6 @@ public class DayTwo {
     }*/
     //PART TWO
     public static void doIt(BufferedReader r, PrintWriter w) throws IOException {
-        // Your code goes here - see Part0 for an example
         List<String> list = new ArrayList<>();
         for (String line = r.readLine(); line != null; line = r.readLine()) {
             list.add(line);

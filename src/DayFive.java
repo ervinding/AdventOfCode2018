@@ -53,13 +53,15 @@ public class DayFive {
 //       System.out.println(x.length());
 //       return x;
 //    }
+
+    //Part 2
     protected static String removePairs(String x, String letter) {
         String temp = x;
         x = x.replaceAll(letter, "");
         x = x.replaceAll(letter.toUpperCase(), "");
         return parse(x);
     }
-
+    //Part 2
     protected static String parse(String x) {
         for (int i = 0; i < x.length()-1; i++) {
             Character curr = x.charAt(i);
