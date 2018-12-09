@@ -1,405 +1,152 @@
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
-import java.util.TreeSet;
-
-// Authored by https://github.com/heatseeker0/AdventOfCode. 
+import java.io.*;
+import java.util.*;
 
 public class DaySeven {
-    public static String INPUT_FILE = "/Users/ervinding/git/AdventOfCode2018/src/input7.txt";
-
-    private static int WORKFORCE_SIZE = 5;
-
-    class Step implements Comparable<Step> {
-        private final char name;
-        private Set<Step> requirements = new TreeSet<>();
-        private boolean completed = false;
-        private boolean undergoing = false;
-
-        public Step(final char name) {
-            this.name = name;
-        }
-
-        /**
-         * Returns the name of this step.
-         *
-         * @return
-         */
-        public char getName() {
-            return name;
-        }
-
-        /**
-         * Adds a new required step to this one.
-         *
-         * @param step Step to add
-         */
-        public void addRequirement(Step step) {
-            requirements.add(step);
-        }
-
-        /**
-         * Returns true if this step has no requirements, or all it's required steps have been already completed.
-         *
-         * @return
-         */
-        public boolean isAvailable() {
-            if (requirements.isEmpty()) {
-                return true;
-            }
-
-            for (Step step : requirements) {
-                if (!step.isCompleted()) {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-        /**
-         * Returns true if this step has been completed.
-         *
-         * @return
-         */
-        public boolean isCompleted() {
-            return completed;
-        }
-
-        public void setCompleted() {
-            completed = true;
-            undergoing = false;
-        }
-
-        public void resetCompleted() {
-            completed = false;
-        }
-
-        public void setUndergoing() {
-            undergoing = true;
-        }
-
-        /**
-         * Returns true if this step is currently being assigned to a worker.
-         *
-         * @return
-         */
-        public boolean isUndergoing() {
-            return undergoing;
-        }
-
-        /**
-         * Returns the next step that needs to be completed, in alphabetical order.
-         *
-         * @return Step that needs to be completed
-         */
-        public Step getNextStep() {
-            for (Step step : requirements) {
-                if (!step.isAvailable()) {
-                    return step;
-                }
-            }
-
-            return null;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (!(o instanceof Step)) {
-                return false;
-            }
-
-            return ((Step) o).name == name;
-        }
-
-        @Override
-        public int hashCode() {
-            return name;
-        }
-
-        @Override
-        public int compareTo(Step o) {
-            return name - o.name;
-        }
-    }
-
-    interface Callback {
-        void onWorkDone();
-    }
-
     /**
-     * A single lonely worker Elf.
-     *
-     * @author Catalin Ionescu
-     *
+     * @param r the reader to read from
+     * @param w the writer to write to
+     * @throws IOException
      */
-    class Worker {
-        private int workRemaining = 0;
-        private Step step;
-        private Callback callback;
+    /* PART ONE */
+//    public static void doIt(BufferedReader r, PrintWriter w) throws IOException {
+//        String[] letters = {"A", "B", "C", "D", "E",
+//                "F", "G", "H", "I", "J",
+//                "K", "L", "M", "N", "O",
+//                "P", "Q", "R", "S", "T",
+//                "U", "V", "W", "X", "Y", "Z"};
+//        HashMap<String, List<String>> m = new HashMap<>();
+//        String dependency, letter;
+//        StringBuilder sb = new StringBuilder();
+//        Boolean[] workers = {false, false, false, false, false};
+//        for (String line = r.readLine(); line != null; line = r.readLine()) {
+//            List<String> dependencies = new ArrayList<>();
+//            dependency = line.substring(5, 6);
+//            letter = line.substring(36, 37);
+//            if (m.containsKey(letter)) {
+//                dependencies = m.get(letter);
+//                dependencies.add(dependency);
+//                m.replace(letter, dependencies);
+//                continue;
+//            }
+//            dependencies.add(dependency);
+//            m.put(letter, dependencies);
+//        }
+//        System.out.println(m.toString());
+//        String nextLetter = null;
+//        List<String> removed = new ArrayList<>();
+//        while (!m.isEmpty()) {
+//            //find the nextletter by finding the one that doesn't have any dependencies.
+//            for (String l : letters) {
+//                if (!m.containsKey(l) && !removed.contains(l)) {
+//                    nextLetter = l;
+//                    removed.add(nextLetter);
+//                    break;
+//                }
+//            }
+//            sb.append(nextLetter);
+//            for (List<String> l : m.values()) {
+//                if (l.contains(nextLetter)) {
+//                    l.remove(nextLetter);
+//                }
+//            }
+//            for (HashMap.Entry<String, List<String>> entry : m.entrySet()) {
+//                if (entry.getValue().isEmpty()) {
+//                    String last = entry.getKey();
+//                    m.remove(entry.getKey());
+//                    if (m.isEmpty()) {
+//                        sb.append(last);
+//                    }
+//                    break;
+//                }
+//            }
+//            System.out.println(sb.toString());
+//            System.out.println(m.toString());
+//        }
+//        System.out.println(sb.length());
+//        System.out.println(sb.toString());
+//    }
 
-        /**
-         * Assigns a work unit to this worker.
-         *
-         * @param step Step to be worked on
-         * @param callback Callback to be called when the work is done. Can be null.
-         */
-        public void setWorking(Step step, Callback callback) {
-            workRemaining = step.getName() - 'A' + 1 + 60;
-            this.step = step;
-            this.callback = callback;
-            step.setUndergoing();
+    String filename = "/Users/ervinding/git/AdventOfCode2018/src/input7.txt";
+
+    /* PART TWO */
+    public DaySeven() {
+        Scanner sc = null;
+        try {
+            sc = new Scanner(new File(filename));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         }
-
-        /**
-         * Advances time by 1 second.
-         */
-        public void timeTick() {
-            if (workRemaining > 0) {
-                workRemaining--;
+        List<String> lines = new ArrayList<String>();
+        while (sc.hasNextLine()) {
+            lines.add(sc.nextLine());
+        }
+        String[] letters = {"A", "B", "C", "D", "E",
+                "F", "G", "H", "I", "J",
+                "K", "L", "M", "N", "O",
+                "P", "Q", "R", "S", "T",
+                "U", "V", "W", "X", "Y", "Z"};
+        String letterString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        HashMap<String, List<String>> m = new HashMap<>();
+        String dependency, letter;
+        StringBuilder sb = new StringBuilder();
+        for (String line : lines) {
+            List<String> dependencies = new ArrayList<>();
+            dependency = line.substring(5, 6);
+            letter = line.substring(36, 37);
+            if (m.containsKey(letter)) {
+                dependencies = m.get(letter);
+                dependencies.add(dependency);
+                m.replace(letter, dependencies);
+                continue;
             }
-            if (workRemaining == 0) {
-                if (step != null) {
-                    step.setCompleted();
-                }
-                if (callback != null) {
-                    callback.onWorkDone();
-                    callback = null;
-                }
-            }
+            dependencies.add(dependency);
+            m.put(letter, dependencies);
         }
-
-        /**
-         * Returns true if this worker is available, false otherwise.
-         *
-         * @return
-         */
-        public boolean isAvailable() {
-            return workRemaining == 0;
-        }
-
-        /**
-         * Returns the work this Elf is currently performing, or '.' if it's idle.
-         *
-         * @return
-         */
-        public char getWork() {
-            return workRemaining > 0 ? step.getName() : '.';
-        }
-    }
-
-    /**
-     * Manager for a pool of workers.
-     *
-     * @author Catalin Ionescu
-     *
-     */
-    class Dispatcher {
-        private Collection<Worker> workers = new ArrayList<>();
-        private Set<Step> workToDo = new HashSet<>();
-
-        /**
-         * Creates a dispatcher that distributes work to available workers.
-         *
-         * @param numWorkers Number of workers in the pool
-         */
-        public Dispatcher(final int numWorkers) {
-            for (int i = 0; i < numWorkers; i++) {
-                workers.add(new Worker());
-            }
-        }
-
-        /**
-         * Queues up some work for processing. This doesn't actually begin any work, just adds it to the queue.
-         *
-         * @param step Step to be added to the queue
-         */
-        public void addWork(Step step) {
-            step.setUndergoing();
-            workToDo.add(step);
-        }
-
-        /**
-         * Returns true if at least one worker is available to take on work.
-         *
-         * @return
-         */
-        public boolean isWorkerAvailable() {
-            return getAvailableWorker() != null;
-        }
-
-        /**
-         * Returns the first available worker, if there's one. If no workers are available, returns null.
-         *
-         * @return
-         */
-        public Worker getAvailableWorker() {
-            for (Worker worker : workers) {
-                if (worker.isAvailable()) {
-                    return worker;
-                }
-            }
-
-            return null;
-        }
-
-        /**
-         * Processes the queued up work, assigning it to any available worker.
-         */
-        public void processQueuedWork() {
-            if (!workToDo.isEmpty()) {
-                Iterator<Step> iter = workToDo.iterator();
-                Worker worker = getAvailableWorker();
-                while (worker != null && iter.hasNext()) {
-                    Step step = iter.next();
-                    worker.setWorking(step, null);
-                    iter.remove();
-                    worker = getAvailableWorker();
-                }
-            }
-        }
-
-        /**
-         * Advances time by 1 second for all workers in the managed pool.
-         */
-        public void timeTick() {
-            for (Worker worker : workers) {
-                worker.timeTick();
-            }
-        }
-
-        /**
-         * Returns true if all assigned work has been performed and all workers are currently idle.
-         *
-         * @return
-         */
-        public boolean isAllWorkDone() {
-            if (!workToDo.isEmpty()) {
-                return false;
-            }
-
-            for (Worker worker : workers) {
-                if (!worker.isAvailable()) {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-        @Override
-        public String toString() {
-            StringBuilder sb = new StringBuilder();
-            boolean first = true;
-            for (Worker worker : workers) {
-                if (first) {
-                    first = false;
-                }
-                sb.append("  ");
-                sb.append(worker.getWork());
-            }
-
-            return sb.toString();
-        }
-    }
-
-    private void main() throws IOException {
-        List<String> input = Files.readAllLines(Paths.get(INPUT_FILE));
-
-
-        Map<Character, Step> steps = new TreeMap<>();
-        for (String line : input) {
-            // Step G must be finished before step W can begin.
-            String[] parts = line.split(" ");
-            char req = parts[1].charAt(0);
-            char next = parts[7].charAt(0);
-
-            steps.putIfAbsent(req, new Step(req));
-            steps.putIfAbsent(next, new Step(next));
-
-            steps.get(next).addRequirement(steps.get(req));
-        }
-
-        // ********* Part 1
-        final StringBuilder sb = new StringBuilder();
-        boolean allDone = false;
-        while (!allDone) {
-            allDone = true;
-            for (Step step : steps.values()) {
-                if (step.isCompleted()) {
-                    continue;
-                }
-
-                if (step.isAvailable()) {
-                    sb.append(step.getName());
-                    step.setCompleted();
-                    allDone = false;
-                    break;
-                }
-            }
-        }
-
-
-
-        // ********* Part 2
-        for (Step step : steps.values()) {
-            step.resetCompleted();
-        }
-
-        Dispatcher dispatcher = new Dispatcher(WORKFORCE_SIZE);
-        int timeElapsed = 0;
-        allDone = false;
-
-        sb.setLength(0);
-
-        while (!allDone || !dispatcher.isAllWorkDone()) {
-            allDone = true;
-
-            // Add all available steps to the dispatcher (producer side)
-            for (final Step step : steps.values()) {
-                if (step.isCompleted()) {
-                    continue;
-                }
-
-                if (step.isAvailable() && !step.isUndergoing()) {
-                    allDone = false;
-                    dispatcher.addWork(step);
-                }
-            }
-
-            // Work on the added steps (consumer side)
-            if (!dispatcher.isAllWorkDone()) {
-                dispatcher.processQueuedWork();
-                // Log.logInfoMessage("%02d %s %s", timeElapsed, dispatcher.toString(), sb.toString());
-                timeElapsed++;
-                dispatcher.timeTick();
-            }
-
-            // More work to do in future?
-            if (allDone) {
-                for (Step step : steps.values()) {
-                    if (!step.isCompleted()) {
-                        allDone = false;
-                        break;
+        System.out.println(m.toString());
+        String nextLetter = null;
+        List<String> removed = new ArrayList<>();
+        int total = 0;
+        Worker[] workers = new Worker[5];
+        while (!m.isEmpty()) {
+            //find the nextletter by finding the one that doesn't have any dependencies.
+            for (Worker w : workers) {
+                if (w.getTimer() == 0) {
+                    for (String l : letters) {
+                        if (!m.containsKey(l) && !removed.contains(l)) {
+                            nextLetter = l;
+                            w.setTimer(letterString.indexOf("l") + 1);
+                            removed.add(nextLetter);
+                            break;
+                        }
                     }
+                    sb.append(nextLetter);
+
+                    for (List<String> l : m.values()) {
+                        if (l.contains(nextLetter)) {
+                            l.remove(nextLetter);
+                        }
+                    }
+                    for (HashMap.Entry<String, List<String>> entry : m.entrySet()) {
+                        if (entry.getValue().isEmpty()) {
+                            String last = entry.getKey();
+                            m.remove(entry.getKey());
+                            if (m.isEmpty()) {
+                                sb.append(last);
+                            }
+                            break;
+                        }
+                    }
+
                 }
             }
         }
+        System.out.println(sb.toString());
+        System.out.println(m.toString());
 
-        // Log.logInfoMessage("%02d %s %s", timeElapsed, dispatcher.toString(), sb.toString());
-        System.out.println("Time required to complete all steps: %d" +  timeElapsed);
     }
 
-    public static void main(String[] args) throws IOException {
-        new DaySeven().main();
+    public static void main(String[] args) {
+        new DaySeven();
+
     }
 }
