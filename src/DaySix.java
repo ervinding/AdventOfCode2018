@@ -101,59 +101,7 @@ public class DaySix {
         System.out.println("Area Size: " + area);
     }
 
-    // Part 1
-//    protected static String parse(String x) {
-//       for (int i = 0; i < x.length()-1; i++) {
-//           Character curr = x.charAt(i);
-//           Character next = x.charAt(i+1);
-//           if (Character.isLowerCase(curr)) {
-//               if (Character.toUpperCase(curr) == next) {
-//                   String toDel = curr.toString() + next.toString();
-//                   x = x.replaceAll(toDel, "");
-//                   System.out.println();
-//                   return parse(x);
-//               }
-//           }
-//           else {
-//               if (Character.toLowerCase(curr) == next) {
-//                   String toDel = curr.toString() + next.toString();
-//                   x = x.replaceAll(toDel, "");
-//                   return parse(x);
-//               }
-//           }
-//       }
-//       System.out.println(x.length());
-//       return x;
-//    }
-    protected static String removePairs(String x, String letter) {
-        String temp = x;
-        x = x.replaceAll(letter, "");
-        x = x.replaceAll(letter.toUpperCase(), "");
-        return parse(x);
-    }
 
-    protected static String parse(String x) {
-        for (int i = 0; i < x.length()-1; i++) {
-            Character curr = x.charAt(i);
-            Character next = x.charAt(i+1);
-            if (Character.isLowerCase(curr)) {
-                if (Character.toUpperCase(curr) == next) {
-                    String toDel = curr.toString() + next.toString();
-                    x = x.replaceAll(toDel, "");
-                    return parse(x);
-                }
-            }
-            else {
-                if (Character.toLowerCase(curr) == next) {
-                    String toDel = curr.toString() + next.toString();
-                    x = x.replaceAll(toDel, "");
-                    return parse(x);
-                }
-            }
-        }
-        System.out.println(x.length());
-        return x;
-    }
 
     /**
      * The driver.  Open a BufferedReader and a PrintWriter, either from System.in
