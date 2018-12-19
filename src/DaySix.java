@@ -1,7 +1,5 @@
 import java.io.*;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.awt.Point;
 
 
@@ -61,7 +59,7 @@ public class DaySix {
             }
         }
 
-        // remove infinite
+        // remove infinite, anything on the edges are considered infinite.. (maxX/maxY/0/0)
         for (int x = 0; x <= maxX; x++) {
             int infinite = grid[x][0];
             regions.remove(infinite);

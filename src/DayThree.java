@@ -56,6 +56,17 @@ public class DayThree {
             map.put(lineIndex,uniqueVal);
             lineIndex++;
         }
+        //loop to get the total amount of overlaps. PART 1.
+        int partOneTotal = 0;
+        for (int i = 0; i  < grid.length; i++) {
+            for (int e = 0; e < grid[i].length; e++) {
+                if (grid[e][i] == 1) {
+                    partOneTotal++;
+                }
+            }
+        }
+        System.out.println("Part 1: " + partOneTotal);
+
         //loop to get the key that appears as many time as the value. Key is the lineindex and the uniqueval is w*l
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             int total = 0;
@@ -66,20 +77,13 @@ public class DayThree {
                     }
                 }
             }
+            /* PART 2, non-overlapping */
             if (total == entry.getValue()) {
-                System.out.println(entry.getKey());
+                System.out.println("Part 2: " + entry.getKey());
             }
         }
-        //loop to get the total amount of overlaps.
-        int total = 0;
-        for (int i = 0; i  < grid.length; i++) {
-            for (int e = 0; e < grid[i].length; e++) {
-                if (grid[e][i] == 1) {
-                    total++;
-                }
-            }
-        }
-        System.out.println(total);
+
+
 
 //        for (int i = 0; i  < grid.length; i++) {
 //            w.println(Arrays.toString(grid[i]));

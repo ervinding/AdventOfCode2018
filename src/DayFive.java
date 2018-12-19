@@ -15,7 +15,6 @@ public class DayFive {
      * @param w the writer to write to
      * @throws IOException
      */
-    /* PART ONE */
     public static void doIt(BufferedReader r, PrintWriter w) throws IOException {
         String line = r.readLine();
         String[] letters = {"a","b","c","d","e",
@@ -23,66 +22,44 @@ public class DayFive {
                             "k","l","m","n","o",
                             "p","q","r","s","t",
                             "u","v","w","x","y","z"};
+        //Part 1
+        parse(line);
 
+        //Part 2
         for (String s : letters) {
             removePairs(line, s);
             System.out.println(s);
         }
     }
     // Part 1
-//    protected static String parse(String x) {
-//       for (int i = 0; i < x.length()-1; i++) {
-//           Character curr = x.charAt(i);
-//           Character next = x.charAt(i+1);
-//           if (Character.isLowerCase(curr)) {
-//               if (Character.toUpperCase(curr) == next) {
-//                   String toDel = curr.toString() + next.toString();
-//                   x = x.replaceAll(toDel, "");
-//                   System.out.println();
-//                   return parse(x);
-//               }
-//           }
-//           else {
-//               if (Character.toLowerCase(curr) == next) {
-//                   String toDel = curr.toString() + next.toString();
-//                   x = x.replaceAll(toDel, "");
-//                   return parse(x);
-//               }
-//           }
-//       }
-//       System.out.println(x.length());
-//       return x;
-//    }
+    protected static String parse(String x) {
+       for (int i = 0; i < x.length()-1; i++) {
+           Character curr = x.charAt(i);
+           Character next = x.charAt(i+1);
+           if (Character.isLowerCase(curr)) {
+               if (Character.toUpperCase(curr) == next) {
+                   String toDel = curr.toString() + next.toString();
+                   x = x.replaceAll(toDel, "");
+                   return parse(x);
+               }
+           }
+           else {
+               if (Character.toLowerCase(curr) == next) {
+                   String toDel = curr.toString() + next.toString();
+                   x = x.replaceAll(toDel, "");
+                   return parse(x);
+               }
+           }
+       }
+       System.out.println(x.length());
+       return x;
+    }
 
-    //Part 2
+    //Part 1 & 2
     protected static String removePairs(String x, String letter) {
-        String temp = x;
         x = x.replaceAll(letter, "");
         x = x.replaceAll(letter.toUpperCase(), "");
         return parse(x);
-    }
-    //Part 2
-    protected static String parse(String x) {
-        for (int i = 0; i < x.length()-1; i++) {
-            Character curr = x.charAt(i);
-            Character next = x.charAt(i+1);
-            if (Character.isLowerCase(curr)) {
-                if (Character.toUpperCase(curr) == next) {
-                    String toDel = curr.toString() + next.toString();
-                    x = x.replaceAll(toDel, "");
-                    return parse(x);
-                }
-            }
-            else {
-                if (Character.toLowerCase(curr) == next) {
-                    String toDel = curr.toString() + next.toString();
-                    x = x.replaceAll(toDel, "");
-                    return parse(x);
-                }
-            }
-        }
-        System.out.println(x.length());
-        return x;
     }
 
     /**

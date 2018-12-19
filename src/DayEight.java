@@ -30,8 +30,10 @@ public class DayEight {
             input.add(Integer.parseInt(ints[i]));
         }
         System.out.println(input.toString());
+        //Part 1
         partOneTotal = parse();
         System.out.println(partOneTotal);
+        //Part 2
         index = 0;
         partTwoTotal = parse2();
         System.out.println(partTwoTotal);

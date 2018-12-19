@@ -4,7 +4,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 
 public class DayOne {
@@ -16,15 +18,33 @@ public class DayOne {
      */
 
     public static void doIt(BufferedReader r, PrintWriter w) throws IOException {
+        List<String> list = new ArrayList<>();
         HashSet<Integer> set = new HashSet<>();
         Integer total = 0;
+        Boolean dupFound = false;
         for (String line = r.readLine(); line != null; line = r.readLine()) {
+            list.add(line);
+        }
+        //Part 1
+        for (String line : list) {
             Integer e = parse(line);
             total += e;
-            if (set.contains(total)) {
-                System.out.println(total);
-            } else {
-                set.add(total);
+        }
+        System.out.println(total);
+
+        //Part 2
+        total = 0;
+        while (!dupFound) {
+            for (String line : list) {
+                Integer e = parse(line);
+                total += e;
+                if (set.contains(total)) {
+                    System.out.println(total);
+                    dupFound = true;
+                    break;
+                } else {
+                    set.add(total);
+                }
             }
         }
 
@@ -41,7 +61,6 @@ public class DayOne {
                 returnVal--;
             }
         }
-
         return returnVal;
     }
     /**

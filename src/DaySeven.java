@@ -17,7 +17,6 @@ public class DaySeven {
 //        HashMap<String, List<String>> m = new HashMap<>();
 //        String dependency, letter;
 //        StringBuilder sb = new StringBuilder();
-//        Boolean[] workers = {false, false, false, false, false};
 //        for (String line = r.readLine(); line != null; line = r.readLine()) {
 //            List<String> dependencies = new ArrayList<>();
 //            dependency = line.substring(5, 6);
@@ -120,7 +119,6 @@ public class DaySeven {
                         }
                     }
                     sb.append(nextLetter);
-
                     for (List<String> l : m.values()) {
                         if (l.contains(nextLetter)) {
                             l.remove(nextLetter);
