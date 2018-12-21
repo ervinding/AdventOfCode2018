@@ -26,11 +26,6 @@ public class DayNine {
 
     String filename = "/Users/ervinding/git/AdventOfCode2018/src/input9.txt";
 
-
-
-    List<Integer> input = new ArrayList<>();
-
-
     public DayNine() {
         Scanner sc = null;
         try {
@@ -86,9 +81,6 @@ public class DayNine {
     protected Long parseScore(String line) {
         return Long.parseLong(line.substring(line.indexOf("worth ")+6,line.indexOf("points")-1));
     }
-
-
-
 
 
     public static void main(String[] args) {

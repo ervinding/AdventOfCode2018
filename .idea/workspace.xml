@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6386bf08-8b1d-4275-b012-4b29252f7cc7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2018/DayEight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2018/DayEight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2018/DayFive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2018/DayFive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2018/DayOne.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2018/DayOne.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2018/DaySeven.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2018/DaySeven.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2018/DaySix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2018/DaySix.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2018/DayThree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2018/DayThree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2018/input1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2018/input1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DayEight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DayEight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DayFive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DayFive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DayOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DayOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DaySeven.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DaySeven.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DaySix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DaySix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DayThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DayThree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/input1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/input1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DayNine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DayNine.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,16 +31,43 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DayNine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="49" column="40" lean-forward="true" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
+            <state relative-caret-position="1245">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2253#2254#0" expanded="true" />
-                <element signature="e#2482#2483#0" expanded="true" />
+                <element signature="e#2238#2239#0" expanded="true" />
+                <element signature="e#2464#2465#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DayTen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="111" column="54" selection-start-line="111" selection-start-column="54" selection-end-line="111" selection-end-column="54" />
+              <folding>
+                <element signature="e#639#640#0" expanded="true" />
+                <element signature="e#673#674#0" expanded="true" />
+                <element signature="e#690#691#0" expanded="true" />
+                <element signature="e#724#725#0" expanded="true" />
+                <element signature="e#698#699#0" expanded="true" />
+                <element signature="e#755#756#0" expanded="true" />
+                <element signature="e#4392#4393#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/input10.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="1414" column="41" selection-start-line="1414" selection-start-column="41" selection-end-line="1414" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -83,6 +96,11 @@
       <find>D</find>
       <find>DayEight</find>
       <find>playerScores</find>
+      <find>line</find>
+      <find>position</find>
+      <find>X</find>
+      <find>==</find>
+      <find>40580</find>
     </findStrings>
     <replaceStrings>
       <replace>lengthStr</replace>
@@ -90,6 +108,11 @@
       <replace>letter</replace>
       <replace>maxY</replace>
       <replace>DayNine</replace>
+      <replace>position</replace>
+      <replace>velocity</replace>
+      <replace>y</replace>
+      <replace>&amp;&amp;</replace>
+      <replace>!=</replace>
       <replace>scores</replace>
     </replaceStrings>
   </component>
@@ -121,10 +144,12 @@
         <option value="$PROJECT_DIR$/src/DayFive.java" />
         <option value="$PROJECT_DIR$/src/input9.txt" />
         <option value="$PROJECT_DIR$/src/DayNine.java" />
+        <option value="$PROJECT_DIR$/src/DayTen.java" />
+        <option value="$PROJECT_DIR$/src/input10.txt" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1920" />
     <option name="height" value="1080" />
   </component>
@@ -157,8 +182,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544693731259" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545362750643" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -180,7 +206,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DayNine">
+  <component name="RunManager" selected="Application.DayTen">
     <configuration name="DayEight" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="DayEight" />
       <module name="AdventOfCode2018" />
@@ -236,6 +262,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DayTen" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="DayTen" />
+      <module name="AdventOfCode2018" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DayThree" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="DayThree" />
       <module name="AdventOfCode2018" />
@@ -261,6 +294,7 @@
       <item itemvalue="Application.DaySeven" />
       <item itemvalue="Application.DayEight" />
       <item itemvalue="Application.DayNine" />
+      <item itemvalue="Application.DayTen" />
       <item itemvalue="Application.DayOne" />
     </list>
     <recent_temporary>
@@ -283,9 +317,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19009584" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553648" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -294,8 +329,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.22178218" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.42574257" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49928468" visible="true" weight="0.38795182" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4313253" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -333,6 +368,12 @@
           <line>102</line>
           <properties />
           <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/DayTen.java</url>
+          <line>111</line>
+          <properties />
+          <option name="timeStamp" value="95" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -572,16 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DaySeven.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DayEight.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
@@ -606,15 +637,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DayNine.java">
+    <entry file="file://$PROJECT_DIR$/src/DaySeven.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="40" lean-forward="true" selection-start-line="49" selection-start-column="40" selection-end-line="49" selection-end-column="40" />
+        <state relative-caret-position="390">
+          <caret line="80" column="9" lean-forward="true" selection-start-line="77" selection-start-column="8" selection-end-line="80" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2253#2254#0" expanded="true" />
-            <element signature="e#2482#2483#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DayNine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1245">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2238#2239#0" expanded="true" />
+            <element signature="e#2464#2465#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DayTen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="111" column="54" selection-start-line="111" selection-start-column="54" selection-end-line="111" selection-end-column="54" />
+          <folding>
+            <element signature="e#639#640#0" expanded="true" />
+            <element signature="e#673#674#0" expanded="true" />
+            <element signature="e#690#691#0" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="e#698#699#0" expanded="true" />
+            <element signature="e#755#756#0" expanded="true" />
+            <element signature="e#4392#4393#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/input10.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="1414" column="41" selection-start-line="1414" selection-start-column="41" selection-end-line="1414" selection-end-column="41" />
         </state>
       </provider>
     </entry>
